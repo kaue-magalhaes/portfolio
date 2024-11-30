@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+    <header className="max-w-7xl w-full mx-auto px-4 py-6 flex justify-between items-center">
       <Link href="/" className="text-xl font-medium">
         Kauê de Magalhães
       </Link>
