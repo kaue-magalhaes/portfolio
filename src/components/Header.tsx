@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 export default function Header() {
   return (
@@ -9,22 +9,31 @@ export default function Header() {
       <nav>
         <ul className="flex space-x-8">
           <li>
-            <Link href="/" className="text-muted-foreground hover:text-foreground">
+            <Link
+              href="/"
+              className="text-muted-foreground hover:text-foreground"
+            >
               Work
             </Link>
           </li>
           <li>
-            <Link href="/about" className="text-muted-foreground hover:text-foreground">
+            <Link
+              href="/about"
+              className="text-muted-foreground hover:text-foreground"
+            >
               About
             </Link>
           </li>
           <li>
-            <Link href="/resume" className="text-muted-foreground hover:text-foreground">
+            <Link
+              href="/resume"
+              className="text-muted-foreground hover:text-foreground"
+            >
               Resume
             </Link>
           </li>
         </ul>
       </nav>
     </header>
-  );
+  )
 }
