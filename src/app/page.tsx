@@ -1,12 +1,36 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { motion } from "motion/react";
 
 export default function Home() {
+  const waveAnimation = {
+    rotate: [0, 14, -8, 14, -4, 10, 0],
+    transition: {
+      duration: 2.5,
+      repeat: Infinity,
+      repeatType: "loop" as const,
+      ease: "linear",
+    },
+  };
+
   return (
-    <section className="flex flex-col justify-center py-20 min-h-[70vh] px-4">
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col justify-center py-20 min-h-[70vh] px-4"
+    >
       <div className="max-w-4xl mx-auto w-full space-y-8">
         <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
-          Hi, I&apos;m Kauê 👋
+          Hi, I&apos;m Kauê{" "}
+          <motion.span
+            animate={waveAnimation}
+            style={{ display: "inline-block", transformOrigin: "70% 70%" }}
+          >
+            👋
+          </motion.span>
         </h1>
 
         <div className="space-y-4">
@@ -31,6 +55,6 @@ export default function Home() {
           </Button>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
