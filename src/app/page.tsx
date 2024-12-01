@@ -1,20 +1,11 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
+import WavingHandEmoji from '@/components/WavingHandEmoji'
 import { ArrowRight } from 'lucide-react'
 import { motion } from 'motion/react'
 
 export default function Home() {
-  const waveAnimation = {
-    rotate: [0, 14, -8, 14, -4, 10, 0],
-    transition: {
-      duration: 2.5,
-      repeat: Number.POSITIVE_INFINITY,
-      repeatType: 'loop' as const,
-      ease: 'linear',
-    },
-  }
-
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
@@ -24,13 +15,7 @@ export default function Home() {
     >
       <div className="max-w-4xl mx-auto w-full space-y-8">
         <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
-          Hi, I&apos;m Kauê{' '}
-          <motion.span
-            animate={waveAnimation}
-            style={{ display: 'inline-block', transformOrigin: '70% 70%' }}
-          >
-            👋
-          </motion.span>
+          Hi, I&apos;m Kauê <WavingHandEmoji />
         </h1>
 
         <div className="space-y-4">
