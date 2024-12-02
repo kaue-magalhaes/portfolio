@@ -1,23 +1,14 @@
-import { useEffect, useState } from 'react'
 import { ArrowRight, Briefcase, FileText, User } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import CommandKey from '@/components/CommandBar/CommandKey'
 import CommandBar from '@/components/CommandBar/CommandBar'
-import { CommandItem, CommandShortcut } from '@/components/ui/command'
+import { useToggleOnKeyCombo } from '@/hooks/useToggleOnKeyCombo'
 
 export default function CommandBarButton() {
-  const [open, setOpen] = useState(false)
-
-  useEffect(() => {
-    const down = (e: KeyboardEvent) => {
-      if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
-        e.preventDefault()
-        setOpen(open => !open)
-      }
-    }
-    document.addEventListener('keydown', down)
-    return () => document.removeEventListener('keydown', down)
-  }, [])
+  const [open, setOpen] = useToggleOnKeyCombo({
+    targetKey: 'k',
+    modifiers: { ctrl: true },
+  })
 
   return (
     <>

@@ -1,8 +1,13 @@
 'use client'
 
-import CommandBarButton from '@/components/CommandBar/CommandBarButton'
-import WavingHandEmoji from '@/components/WavingHandEmoji'
+import dynamic from 'next/dynamic'
 import { motion } from 'motion/react'
+import WavingHandEmoji from '@/components/WavingHandEmoji'
+
+const CommandBarButton = dynamic(
+  () => import('@/components/CommandBar/CommandBarButton'),
+  { ssr: false }
+)
 
 export default function Home() {
   return (
