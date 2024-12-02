@@ -1,6 +1,6 @@
 'use client'
 
-import CommandBarButton from '@/components/CommandBarButton'
+import CommandBarButton from '@/components/CommandBar/CommandBarButton'
 import WavingHandEmoji from '@/components/WavingHandEmoji'
 import { motion } from 'motion/react'
 

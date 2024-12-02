@@ -1,9 +1,9 @@
+import { useEffect, useState } from 'react'
 import { ArrowRight, Briefcase, FileText, User } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { useEffect, useState } from 'react'
-import CommandKey from './CommandKey'
-import CommandBar from './CommandBar'
-import { CommandItem, CommandShortcut } from './ui/command'
+import CommandKey from '@/components/CommandBar/CommandKey'
+import CommandBar from '@/components/CommandBar/CommandBar'
+import { CommandItem, CommandShortcut } from '@/components/ui/command'
 
 export default function CommandBarButton() {
   const [open, setOpen] = useState(false)

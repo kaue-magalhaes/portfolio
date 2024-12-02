@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import NavLink from './NavLink'
+import NavLink from '@/components/NavLink'
 
 export default function Header() {
   return (
