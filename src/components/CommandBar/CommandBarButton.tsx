@@ -24,23 +24,30 @@ export default function CommandBarButton() {
           <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
         </p>
       </Button>
-      <CommandBar open={open} setOpen={setOpen}>
-        <CommandItem>
-          <Briefcase />
-          <span>Work</span>
-          <CommandShortcut>W</CommandShortcut>
-        </CommandItem>
-        <CommandItem>
-          <User />
-          <span>About</span>
-          <CommandShortcut>A</CommandShortcut>
-        </CommandItem>
-        <CommandItem>
-          <FileText />
-          <span>Resume</span>
-          <CommandShortcut>R</CommandShortcut>
-        </CommandItem>
-      </CommandBar>
+      <CommandBar
+        open={open}
+        setOpen={setOpen}
+        commandItems={[
+          {
+            key: 'work',
+            icon: <Briefcase />,
+            label: 'Work',
+            shortcut: 'W',
+          },
+          {
+            key: 'about',
+            icon: <User />,
+            label: 'About',
+            shortcut: 'A',
+          },
+          {
+            key: 'resume',
+            icon: <FileText />,
+            label: 'Resume',
+            shortcut: 'R',
+          },
+        ]}
+      />
     </>
   )
 }
