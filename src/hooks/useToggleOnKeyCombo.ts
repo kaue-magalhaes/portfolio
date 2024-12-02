@@ -16,7 +16,7 @@ type UseKeyComboOptions = {
 export function useToggleOnKeyCombo({
   targetKey,
   modifiers = {},
-  element = window,
+  element,
 }: UseKeyComboOptions) {
   const [isActive, setIsActive] = useState(false)
 
@@ -33,8 +33,9 @@ export function useToggleOnKeyCombo({
   )
 
   useEffect(() => {
-    if (!element) return
-
+    if (typeof window === 'undefined') return
+    
+    const targetElement = element || window
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key.toLowerCase() === targetKey.toLowerCase() && areModifiersPressed(e)) {
         e.preventDefault()
@@ -42,10 +43,10 @@ export function useToggleOnKeyCombo({
       }
     }
 
-    element.addEventListener('keydown', handleKeyDown as EventListener)
+    targetElement.addEventListener('keydown', handleKeyDown as EventListener)
 
     return () => {
-      element.removeEventListener('keydown', handleKeyDown as EventListener)
+      targetElement.removeEventListener('keydown', handleKeyDown as EventListener)
     }
   }, [targetKey, areModifiersPressed, element])
 
