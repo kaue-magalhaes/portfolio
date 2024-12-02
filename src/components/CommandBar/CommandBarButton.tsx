@@ -1,8 +1,12 @@
-import { ArrowRight, Briefcase, FileText, User } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { ArrowRight } from 'lucide-react'
+
 import CommandKey from '@/components/CommandBar/CommandKey'
 import CommandBar from '@/components/CommandBar/CommandBar'
+import { Button } from '@/components/ui/button'
+
 import { useToggleOnKeyCombo } from '@/hooks/useToggleOnKeyCombo'
+
+import { commandItems } from '@/constants/commandItems'
 
 export default function CommandBarButton() {
   const [open, setOpen] = useToggleOnKeyCombo({
@@ -24,30 +28,7 @@ export default function CommandBarButton() {
           <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
         </p>
       </Button>
-      <CommandBar
-        open={open}
-        setOpen={setOpen}
-        commandItems={[
-          {
-            key: 'work',
-            icon: <Briefcase />,
-            label: 'Work',
-            shortcut: 'W',
-          },
-          {
-            key: 'about',
-            icon: <User />,
-            label: 'About',
-            shortcut: 'A',
-          },
-          {
-            key: 'resume',
-            icon: <FileText />,
-            label: 'Resume',
-            shortcut: 'R',
-          },
-        ]}
-      />
+      <CommandBar open={open} setOpen={setOpen} commandItems={commandItems} />
     </>
   )
 }

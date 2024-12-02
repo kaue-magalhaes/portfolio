@@ -29,7 +29,7 @@ export default function CommandBar({
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
-        { commandItems.map((item) => (
+        {commandItems.map(item => (
           <CommandItem key={item.key}>
             {item.icon}
             {item.label}
