@@ -9,9 +9,9 @@ export default function Header() {
       </Link>
       <nav>
         <ul className="flex space-x-8">
-          <NavLink url="/">Work</NavLink>
-          <NavLink url="/about">About</NavLink>
-          <NavLink url="/resume">Resume</NavLink>
+          <NavLink href="/">Work</NavLink>
+          <NavLink href="/about">About</NavLink>
+          <NavLink href="/resume">Resume</NavLink>
         </ul>
       </nav>
     </header>
