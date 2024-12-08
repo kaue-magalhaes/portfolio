@@ -3,8 +3,11 @@
 import Image from 'next/image'
 import me from '../../../public/images/me.gif'
 import { motion } from 'motion/react'
+import { useState } from 'react'
 
 export default function About() {
+  const [hovered, setHovered] = useState<string | null>(null)
+
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
@@ -54,14 +57,44 @@ export default function About() {
           <h1 className="text-2xl md:text-2xl font-bold tracking-tight">
             Career
           </h1>
-          <div className="space-y-4">
-            <div>
+          <div>
+            <motion.div
+              onHoverStart={() => setHovered('freelance')}
+              onHoverEnd={() => setHovered(null)}
+              className="p-4 relative rounded-lg transition-all"
+            >
+              {hovered === 'freelance' && (
+                <motion.div
+                  layoutId="hoverBackground"
+                  className="absolute inset-0 bg-muted rounded-lg"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                  style={{ zIndex: -1 }}
+                />
+              )}
               <h2 className="text-lg font-bold">
                 Full Stack Developer (Freelance)
               </h2>
               <p className="text-muted-foreground">July 2024 - Present</p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              onHoverStart={() => setHovered('intern')}
+              onHoverEnd={() => setHovered(null)}
+              className="p-4 relative rounded-lg transition-all ease-in-out"
+            >
+              {hovered === 'intern' && (
+                <motion.div
+                  layoutId="hoverBackground"
+                  className="absolute inset-0 bg-muted rounded-lg"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                  style={{ zIndex: -1 }}
+                />
+              )}
               <h2 className="text-lg font-bold">Full Stack Developer Intern</h2>
               <p className="text-muted-foreground">
                 <a
@@ -75,7 +108,7 @@ export default function About() {
               <p className="text-muted-foreground">
                 April 2023 - May 2024 • 1 yr 1 mos
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
