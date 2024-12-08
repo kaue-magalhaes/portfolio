@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import me from '../../../public/images/me.jpg'
+import me from '../../../public/images/me.gif'
 import { motion } from 'motion/react'
 
 export default function About() {
