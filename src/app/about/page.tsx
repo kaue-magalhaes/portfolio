@@ -53,7 +53,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="space-y-5">
+        <div>
           <h1 className="text-2xl md:text-2xl font-bold tracking-tight">
             Career
           </h1>
