@@ -2,13 +2,11 @@
 
 import Image from 'next/image'
 import me from '../../../public/images/me.gif'
-import { motion } from 'motion/react'
-import { useState } from 'react'
 import ContentContainer from '@/components/ContentContainer'
+import Jobs from '@/components/Jobs'
+import { JOBS } from '@/constants/jobs'
 
 export default function About() {
-  const [hovered, setHovered] = useState<string | null>(null)
-
   return (
     <ContentContainer className="py-10">
       <div className="space-y-4">
@@ -53,57 +51,7 @@ export default function About() {
           Career
         </h1>
         <div>
-          <motion.div
-            onHoverStart={() => setHovered('freelance')}
-            onHoverEnd={() => setHovered(null)}
-            className="p-4 relative rounded-lg transition-all"
-          >
-            {hovered === 'freelance' && (
-              <motion.div
-                layoutId="hoverBackground"
-                className="absolute inset-0 bg-muted rounded-lg"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-                style={{ zIndex: -1 }}
-              />
-            )}
-            <h2 className="text-lg font-bold">
-              Full Stack Developer (Freelance)
-            </h2>
-            <p className="text-muted-foreground">July 2024 - Present</p>
-          </motion.div>
-          <motion.div
-            onHoverStart={() => setHovered('intern')}
-            onHoverEnd={() => setHovered(null)}
-            className="p-4 relative rounded-lg transition-all ease-in-out"
-          >
-            {hovered === 'intern' && (
-              <motion.div
-                layoutId="hoverBackground"
-                className="absolute inset-0 bg-muted rounded-lg"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-                style={{ zIndex: -1 }}
-              />
-            )}
-            <h2 className="text-lg font-bold">Full Stack Developer Intern</h2>
-            <p className="text-muted-foreground">
-              <a
-                className="underline text-foreground hover:text-foreground/90"
-                href="https://www.mpap.mp.br/"
-              >
-                Ministério publico do Amapá
-              </a>{' '}
-              • Amapá, Brazil
-            </p>
-            <p className="text-muted-foreground">
-              April 2023 - May 2024 • 1 yr 1 mos
-            </p>
-          </motion.div>
+          <Jobs jobs={JOBS} />
         </div>
       </div>
     </ContentContainer>
