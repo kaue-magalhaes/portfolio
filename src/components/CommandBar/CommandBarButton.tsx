@@ -1,3 +1,5 @@
+'use client'
+
 import { ArrowRight } from 'lucide-react'
 
 import CommandKey from '@/components/CommandBar/CommandKey'

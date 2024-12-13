@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import me from '../../../public/images/me.gif'
 import ContentContainer from '@/components/ContentContainer'

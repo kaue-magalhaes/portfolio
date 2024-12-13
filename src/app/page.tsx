@@ -1,5 +1,3 @@
-'use client'
-
 import WavingHandEmoji from '@/components/WavingHandEmoji'
 import CommandBarButton from '@/components/CommandBar/CommandBarButton'
 import ContentContainer from '@/components/ContentContainer'
