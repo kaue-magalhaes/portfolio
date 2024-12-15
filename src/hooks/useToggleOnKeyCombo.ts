@@ -1,4 +1,4 @@
-  'use client'
+'use client'
 
 import { useCallback, useEffect } from 'react'
 import type { ToggleOnKeyComboOptions } from '@/types/command'
