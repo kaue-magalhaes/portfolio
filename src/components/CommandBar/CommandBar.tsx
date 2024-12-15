@@ -1,6 +1,6 @@
 'use client'
 
-import { redirect } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import {
   CommandDialog,
   CommandEmpty,
@@ -17,6 +17,7 @@ interface CommandBarProps {
 }
 
 export default function CommandBar({ actions }: CommandBarProps) {
+  const router = useRouter()
   const [open, toggleCommandBar, closeCommandBar] = useToggleOnKeyCombo({
     targetKey: 'k',
     modifiers: { ctrl: true },
@@ -24,7 +25,7 @@ export default function CommandBar({ actions }: CommandBarProps) {
 
   const handleSelect = (action: CommandAction) => {
     closeCommandBar()
-    redirect(action.href as string)
+    router.push(action.href as string)
   }
 
   return (
