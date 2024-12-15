@@ -1,20 +1,26 @@
-import type { JobProps } from '@/components/Jobs'
+import type { Job } from '@/types/job'
 
-export const JOBS: JobProps[] = [
+export const jobs: Job[] = [
   {
     key: 'freelance',
     role: 'Full Stack Developer (Freelance)',
-    startDate: 'July 2024',
-    endDate: 'Present',
+    period: {
+      start: 'July 2024',
+      end: 'Present',
+    },
   },
   {
     key: 'intern',
     role: 'Full Stack Developer Intern',
-    company: 'Ministério publico do Amapá',
-    companyUrl: 'https://www.mpap.mp.br/',
+    company: {
+      name: 'Ministério Publico do Amapá',
+      url: 'https://www.mpap.mp.br/',
+    },
     location: 'Amapá, Brazil',
-    startDate: 'April 2023',
-    endDate: 'May 2024',
-    duration: '1 yr 1 mos',
+    period: {
+      start: 'April 2023',
+      end: 'May 2024',
+      duration: '1 yr 1 mos',
+    },
   },
 ]

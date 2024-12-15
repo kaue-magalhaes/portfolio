@@ -3,10 +3,15 @@
 import { motion } from 'motion/react'
 import { cn } from '@/lib/utils'
 
+interface ContentContainerProps {
+  className?: string
+  children: React.ReactNode
+}
+
 export default function ContentContainer({
   className,
   children,
-}: { className?: string; children: React.ReactNode }) {
+}: ContentContainerProps) {
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}

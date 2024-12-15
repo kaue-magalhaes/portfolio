@@ -1,23 +1,11 @@
+import type { ToggleOnKeyComboOptions } from '@/types/command'
 import { useCallback, useEffect, useState } from 'react'
-
-type KeyModifiers = {
-  ctrl?: boolean
-  meta?: boolean
-  alt?: boolean
-  shift?: boolean
-}
-
-type UseKeyComboOptions = {
-  targetKey: string
-  modifiers?: KeyModifiers
-  element?: HTMLElement | Window
-}
 
 export function useToggleOnKeyCombo({
   targetKey,
   modifiers = {},
   element,
-}: UseKeyComboOptions) {
+}: ToggleOnKeyComboOptions) {
   const [isActive, setIsActive] = useState(false)
 
   const areModifiersPressed = useCallback(

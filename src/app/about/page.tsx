@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import me from '../../../public/images/me.gif'
 import ContentContainer from '@/components/ContentContainer'
-import Jobs from '@/components/Jobs'
-import { JOBS } from '@/constants/jobs'
+import JobsContainer from '@/components/Jobs/JobsContainer'
+import { jobs } from '@/constants/jobs'
 
 export default function About() {
   return (
@@ -48,9 +48,7 @@ export default function About() {
         <h1 className="text-2xl md:text-2xl font-bold tracking-tight">
           Career
         </h1>
-        <div>
-          <Jobs jobs={JOBS} />
-        </div>
+        <JobsContainer jobs={jobs} />
       </div>
     </ContentContainer>
   )

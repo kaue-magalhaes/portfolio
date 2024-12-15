@@ -1,15 +1,15 @@
 import Link from 'next/link'
-import Navigation from '@/components/Navigation'
+import NavigationBar from '@/components/Navigation/NavigationBar'
 import { navigationRoutes } from '@/constants/navigationRoutes'
-import { ROUTES } from '@/constants/routes'
+import { routes } from '@/constants/routes'
 
 export default function Header() {
   return (
     <header className="max-w-7xl w-full mx-auto px-4 py-6 flex justify-between items-center">
-      <Link href={ROUTES.HOME} className="text-xl font-medium">
+      <Link href={routes.home} className="text-xl font-medium">
         Kauê de Magalhães
       </Link>
-      <Navigation routes={navigationRoutes} />
+      <NavigationBar routes={navigationRoutes} />
     </header>
   )
 }
