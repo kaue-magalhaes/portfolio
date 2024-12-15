@@ -1,12 +1,15 @@
+  'use client'
+
+import { useCallback, useEffect } from 'react'
 import type { ToggleOnKeyComboOptions } from '@/types/command'
-import { useCallback, useEffect, useState } from 'react'
+import { useCommandBar } from '@/contexts/CommandBarContext'
 
 export function useToggleOnKeyCombo({
   targetKey,
   modifiers = {},
   element,
 }: ToggleOnKeyComboOptions) {
-  const [isActive, setIsActive] = useState(false)
+  const { isOpen, toggleCommandBar, closeCommandBar } = useCommandBar()
 
   const areModifiersPressed = useCallback(
     (event: KeyboardEvent) => {
@@ -30,7 +33,7 @@ export function useToggleOnKeyCombo({
         areModifiersPressed(e)
       ) {
         e.preventDefault()
-        setIsActive(prev => !prev)
+        toggleCommandBar()
       }
     }
 
@@ -42,7 +45,7 @@ export function useToggleOnKeyCombo({
         handleKeyDown as EventListener
       )
     }
-  }, [targetKey, areModifiersPressed, element])
+  }, [targetKey, areModifiersPressed, element, toggleCommandBar])
 
-  return [isActive, setIsActive] as const
+  return [isOpen, toggleCommandBar, closeCommandBar] as const
 }
