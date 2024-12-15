@@ -3,6 +3,9 @@ import localFont from 'next/font/local'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import CommandBar from '@/components/CommandBar/CommandBar'
+import { commandActions } from '@/constants/commandActions'
+import { CommandBarProvider } from '@/contexts/CommandBarContext'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -30,11 +33,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col dark`}
       >
-        <Header />
-        <main className="max-w-7xl w-full flex-grow mx-auto px-4 py-6">
-          {children}
-        </main>
-        <Footer />
+        <CommandBarProvider>
+          <Header />
+          <main className="max-w-7xl w-full flex-grow mx-auto px-4 py-6">
+            {children}
+            <CommandBar actions={commandActions} />
+          </main>
+          <Footer />
+        </CommandBarProvider>
       </body>
     </html>
   )
