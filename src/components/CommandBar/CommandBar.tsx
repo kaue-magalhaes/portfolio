@@ -1,3 +1,4 @@
+import { redirect } from 'next/navigation'
 import {
   CommandDialog,
   CommandEmpty,
@@ -6,34 +7,34 @@ import {
   CommandList,
   CommandShortcut,
 } from '@/components/ui/command'
-import type { Dispatch, SetStateAction } from 'react'
+import type { CommandAction } from '@/types/command'
 
-interface CommandItemProps {
-  key: string
-  icon: React.ReactNode
-  label: string
-  shortcut: string
+interface CommandBarProps {
+  open: boolean
+  onOpenChange: (open: boolean) => void
+  actions: CommandAction[]
 }
 
 export default function CommandBar({
   open,
-  setOpen,
-  commandItems,
-}: {
-  open: boolean
-  setOpen: Dispatch<SetStateAction<boolean>>
-  commandItems: CommandItemProps[]
-}) {
+  onOpenChange,
+  actions,
+}: CommandBarProps) {
+  const handleSelect = (action: CommandAction) => {
+    onOpenChange(false)
+    redirect(action.href as string)
+  }
+
   return (
-    <CommandDialog open={open} onOpenChange={setOpen}>
+    <CommandDialog open={open} onOpenChange={onOpenChange}>
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
-        {commandItems.map(item => (
-          <CommandItem key={item.key}>
-            {item.icon}
-            {item.label}
-            <CommandShortcut>{item.shortcut}</CommandShortcut>
+        {actions.map(action => (
+          <CommandItem key={action.key} onSelect={() => handleSelect(action)}>
+            {action.icon}
+            {action.label}
+            <CommandShortcut>{action.shortcut}</CommandShortcut>
           </CommandItem>
         ))}
       </CommandList>
