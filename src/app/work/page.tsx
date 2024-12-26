@@ -1,3 +1,5 @@
+'use client'
+
 import ContentContainer from '@/components/ContentContainer'
 import me from '../../../public/images/me.gif'
 import {
@@ -8,8 +10,12 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import Image from 'next/image'
+import { motion } from 'motion/react'
+import { useState } from 'react'
 
 export default function Work() {
+  const [hovered, setHovered] = useState<string | null>(null)
+
   return (
     <ContentContainer className="py-10">
       <div className="space-y-4">
@@ -24,29 +30,71 @@ export default function Work() {
           worked on.
         </p>
       </div>
-      <div className="grid gap-6 sm:grid-cols-2">
-        <Card className="h-full flex flex-col overflow-hidden hover:shadow-2xl hover:shadow-foreground/20 hover:scale-105 transition-all duration-300">
-          <CardHeader className="p-0">
+      <div className="grid sm:grid-cols-2">
+        <motion.Card
+          onHoverStart={() => setHovered('project1')}
+          onHoverEnd={() => setHovered(null)}
+          className="h-full flex flex-col overflow-hidden border-0 relative transition-all ease-in-out"
+        >
+          {hovered === 'project1' && (
+            <motion.div
+              layoutId="hoverBackground"
+              className="absolute inset-0 bg-muted rounded-lg"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+              style={{ zIndex: -1 }}
+            />
+          )}
+          <CardHeader>
             <div className="overflow-hidden">
-              <Image src={me} alt="Kauê de Magalhães" className="w-full h-96 object-cover transition-transform duration-300" />
+              <Image
+                src={me}
+                alt="Kauê de Magalhães"
+                className="w-  h-96 object-cover transition-transform duration-300"
+              />
             </div>
           </CardHeader>
-          <CardContent className="flex-grow p-4">
-            <CardTitle className='font-semibold text-xl mb-2'>Kauê de Magalhães</CardTitle>
+          <CardContent>
+            <CardTitle className="font-semibold text-xl mb-2">
+              Kauê de Magalhães
+            </CardTitle>
             <CardDescription>I'm testing this card component.</CardDescription>
           </CardContent>
-        </Card>
-        <Card className="h-full flex flex-col overflow-hidden hover:shadow-2xl hover:shadow-foreground/20 hover:scale-105 transition-all duration-300">
-          <CardHeader className="p-0">
+        </motion.Card>
+        <motion.Card
+          onHoverStart={() => setHovered('project2')}
+          onHoverEnd={() => setHovered(null)}
+          className="h-full flex flex-col overflow-hidden border-0 relative transition-all ease-in-out"
+        >
+          {hovered === 'project2' && (
+            <motion.div
+              layoutId="hoverBackground"
+              className="absolute inset-0 bg-muted rounded-lg"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+              style={{ zIndex: -1 }}
+            />
+          )}
+          <CardHeader>
             <div className="overflow-hidden">
-              <Image src={me} alt="Kauê de Magalhães" className="w-full h-96 object-cover transition-transform duration-300" />
+              <Image
+                src={me}
+                alt="Kauê de Magalhães"
+                className="w-full h-96 object-cover transition-transform duration-300"
+              />
             </div>
           </CardHeader>
-          <CardContent className="flex-grow p-4">
-            <CardTitle className='font-semibold text-xl mb-2'>Kauê de Magalhães</CardTitle>
+          <CardContent>
+            <CardTitle className="font-semibold text-xl mb-2">
+              Kauê de Magalhães
+            </CardTitle>
             <CardDescription>I'm testing this card component.</CardDescription>
           </CardContent>
-        </Card>
+        </motion.Card>
       </div>
     </ContentContainer>
   )
