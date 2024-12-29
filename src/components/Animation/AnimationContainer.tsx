@@ -6,12 +6,14 @@ import { cn } from '@/lib/utils'
 
 interface AnimationContainerProps {
   key: string
+  animationId: string
   className?: string
   children: React.ReactNode
 }
 
 export default function AnimationContainer({
   key,
+  animationId,
   className,
   children,
 }: AnimationContainerProps) {
@@ -22,17 +24,15 @@ export default function AnimationContainer({
       key={key}
       onHoverStart={() => setHovered(key)}
       onHoverEnd={() => setHovered(null)}
-      className={cn('relative transition-all ease-in-out', className)}
+      className={cn('relative', className)}
     >
       {hovered === key && (
         <motion.div
-          layoutId="hoverBackground"
-          className="absolute inset-0 bg-muted rounded-lg"
+          layoutId={animationId}
+          className="absolute inset-0 bg-muted rounded-lg -z-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-          style={{ zIndex: -1 }}
         />
       )}
       {children}
