@@ -12,6 +12,7 @@ export default function JobsContainer({ jobs }: JobsContainerProps) {
       {jobs.map(job => (
         <AnimationContainer
           key={job.key}
+          itemKey={job.key}
           animationId="job-container"
           className="p-4 rounded-lg"
         >

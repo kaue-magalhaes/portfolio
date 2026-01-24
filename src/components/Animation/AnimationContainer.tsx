@@ -5,14 +5,14 @@ import { useState } from 'react'
 import { cn } from '@/lib/utils'
 
 interface AnimationContainerProps {
-  key: string
+  itemKey: string
   animationId: string
   className?: string
   children: React.ReactNode
 }
 
 export default function AnimationContainer({
-  key,
+  itemKey,
   animationId,
   className,
   children,
@@ -21,12 +21,11 @@ export default function AnimationContainer({
 
   return (
     <motion.div
-      key={key}
-      onHoverStart={() => setHovered(key)}
+      onHoverStart={() => setHovered(itemKey)}
       onHoverEnd={() => setHovered(null)}
       className={cn('relative', className)}
     >
-      {hovered === key && (
+      {hovered === itemKey && (
         <motion.div
           layoutId={animationId}
           className="absolute inset-0 bg-muted rounded-lg -z-10"
