@@ -15,31 +15,31 @@ export default function About() {
         </h1>
         <div className="grid grid-cols-2 gap-8">
           <Image src={me} alt="Kauê de Magalhães" className="rounded" />
-          <div className="space-y-4 text-lg text-muted-foreground">
-            <p>
+          <div className="space-y-4">
+            <p className="text-lg text-muted-foreground">
               <span className="text-foreground">
                 I'm a full-stack developer
               </span>{' '}
               with a big dream: to one day work at top tech companies like
               Google or Meta.
             </p>
-            <p>
+            <p className="text-lg text-muted-foreground">
               In my{' '}
               <span className="text-foreground">1.5 years of experience</span>{' '}
               I'm constantly growing by studying every day and challenging
               myself to go beyond what I know.
             </p>
-            <p>
+            <p className="text-lg text-muted-foreground">
               What drives me the most is my{' '}
               <span className="text-foreground">love for technology</span> and
               my <span className="text-foreground">passion for learning</span>.
               I thrive in environments where curiosity, collaboration, and
               innovation are at the center.
             </p>
-            <p>
+            <p className="text-lg text-muted-foreground">
               When I'm not coding, I enjoy watching movies, playing soccer with
               my friends, and{' '}
-              <span className="text-foreground">drinking coffee.</span>
+              <span className="text-foreground">drinking coffee</span>.
             </p>
           </div>
         </div>
