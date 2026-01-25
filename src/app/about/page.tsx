@@ -14,7 +14,7 @@ export default function About() {
           </span>
         </h1>
         <div className="grid grid-cols-2 gap-8">
-          <Image src={me} alt="Kauê de Magalhães" className="rounded" />
+          <Image src={me} alt="Kauê de Magalhães" className="rounded" unoptimized />
           <div className="space-y-4">
             <p className="text-lg text-muted-foreground">
               <span className="text-foreground">
