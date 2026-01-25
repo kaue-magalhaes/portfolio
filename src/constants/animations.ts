@@ -4,6 +4,6 @@ export const wavingHandAnimation = {
     duration: 2.5,
     repeat: Number.POSITIVE_INFINITY,
     repeatType: 'loop' as const,
-    ease: 'linear',
+    ease: 'linear' as const,
   },
 }

@@ -35,7 +35,7 @@ export default function RootLayout({
       >
         <CommandBarProvider>
           <Header />
-          <main className="max-w-7xl w-full flex-grow mx-auto px-4 py-6">
+          <main className="max-w-7xl w-full grow mx-auto px-4 py-6">
             {children}
             <CommandBar actions={commandActions} />
           </main>
