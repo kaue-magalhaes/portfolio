@@ -9,7 +9,7 @@ export default function Work() {
     <ContentContainer className="py-10">
       <div className="space-y-4">
         <h1 className="text-2xl md:text-3xl font-bold tracking-tight">
-          <span className="bg-gradient-to-r from-rose-400 to-violet-500 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-rose-400 to-violet-500 bg-clip-text text-transparent">
             Crafting code. Creating impact.
           </span>
         </h1>

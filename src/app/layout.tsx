@@ -29,13 +29,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col dark`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <CommandBarProvider>
           <Header />
-          <main className="max-w-7xl w-full flex-grow mx-auto px-4 py-6">
+          <main className="max-w-7xl w-full grow mx-auto px-4 py-6">
             {children}
             <CommandBar actions={commandActions} />
           </main>

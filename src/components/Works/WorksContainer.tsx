@@ -14,7 +14,7 @@ export default function WorksContainer({ works }: WorksContainerProps) {
           key={work.key}
           itemKey={work.key}
           animationId="work-container"
-          className="rounded-lg text-card-foreground shadow h-full flex flex-col border-0"
+          className="rounded-lg text-card-foreground shadow-sm h-full flex flex-col border-0"
         >
           <WorkItem work={work} />
         </AnimationContainer>

@@ -9,12 +9,12 @@ export default function About() {
     <ContentContainer className="py-10">
       <div className="space-y-4">
         <h1 className="text-2xl md:text-3xl font-bold tracking-tight">
-          <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
             Living to code. Loving to learn.
           </span>
         </h1>
         <div className="grid grid-cols-2 gap-8">
-          <Image src={me} alt="Kauê de Magalhães" className="rounded" />
+          <Image src={me} alt="Kauê de Magalhães" className="rounded" unoptimized />
           <div className="space-y-4">
             <p className="text-lg text-muted-foreground">
               <span className="text-foreground">

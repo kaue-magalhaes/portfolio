@@ -17,6 +17,7 @@ export default function WorkItem({ work }: WorkItemProps) {
             width={800}
             height={450}
             className="w-full h-96 object-cover transition-transform duration-300"
+            unoptimized={work.image.path.endsWith('.gif')}
           />
         </div>
       </CardHeader>
