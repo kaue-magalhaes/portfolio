@@ -13,7 +13,7 @@ export default function About() {
             Living to code. Loving to learn.
           </span>
         </h1>
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Image
             src={me}
             alt="Kauê de Magalhães"
