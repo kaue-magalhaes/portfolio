@@ -14,12 +14,7 @@ export default function About() {
           </span>
         </h1>
         <div className="grid grid-cols-2 gap-8">
-          <Image
-            src={me}
-            alt="Kauê de Magalhães"
-            className="rounded"
-            unoptimized
-          />
+          <Image src={me} alt="Kauê de Magalhães" className="rounded" unoptimized />
           <div className="space-y-4">
             <p className="text-lg text-muted-foreground">
               <span className="text-foreground">
@@ -30,9 +25,7 @@ export default function About() {
             </p>
             <p className="text-lg text-muted-foreground">
               In my{' '}
-              <span className="text-foreground">
-                almost 3 years of experience
-              </span>{' '}
+              <span className="text-foreground">1.5 years of experience</span>{' '}
               I'm constantly growing by studying every day and challenging
               myself to go beyond what I know.
             </p>
