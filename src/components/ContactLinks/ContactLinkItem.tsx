@@ -11,7 +11,7 @@ export default function ContactLinkItem({ link }: ContactLinkItemProps) {
         href={link.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-muted-foreground hover:text-foreground"
+        className="min-h-[44px] flex items-center text-muted-foreground hover:text-foreground"
       >
         {link.label}
       </a>

@@ -17,7 +17,8 @@ export default function NavigationItem({ route }: NavigationItemProps) {
       <Link
         href={route.href}
         className={`
-          ${isActive ? 'text-foreground' : 'text-muted-foreground'} 
+          min-h-[44px] flex items-center
+          ${isActive ? 'text-foreground' : 'text-muted-foreground'}
           hover:text-foreground
         `}
       >
