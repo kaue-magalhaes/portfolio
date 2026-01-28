@@ -8,7 +8,7 @@ export const jobs: Job[] = [
       name: 'Proesc',
       url: 'https://proesc.com/',
     },
-    location: 'Remote, Brazil',
+    location: 'Amapá, Brazil (Hybrid)',
     period: {
       start: 'April 2025',
       end: 'Present',
