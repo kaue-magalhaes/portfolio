@@ -19,8 +19,53 @@ const geistMono = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Kauê de Magalhães 🖖',
-  description: 'This is my personal website',
+  metadataBase: new URL('https://kauem.dev'),
+  title: {
+    default: 'Kauê de Magalhães - Full Stack Developer',
+    template: '%s | Kauê de Magalhães',
+  },
+  description:
+    'Full Stack Developer especializado em Laravel, React e Next.js. Portfólio com projetos profissionais, experiência e artigos técnicos.',
+  keywords: [
+    'Full Stack Developer',
+    'Laravel',
+    'React',
+    'Next.js',
+    'TypeScript',
+    'PHP',
+    'Web Developer',
+    'Software Engineer',
+  ],
+  authors: [{ name: 'Kauê de Magalhães' }],
+  creator: 'Kauê de Magalhães',
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    url: 'https://kauem.dev',
+    siteName: 'Kauê de Magalhães',
+    title: 'Kauê de Magalhães - Full Stack Developer',
+    description:
+      'Full Stack Developer especializado em Laravel, React e Next.js. Portfólio com projetos profissionais e artigos técnicos.',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Kauê de Magalhães - Full Stack Developer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kauê de Magalhães - Full Stack Developer',
+    description:
+      'Full Stack Developer especializado em Laravel, React e Next.js.',
+    images: ['/images/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({
