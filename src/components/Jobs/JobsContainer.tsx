@@ -1,6 +1,6 @@
-import type { Job } from '@/types/job'
+import ItemsContainer from '@/components/ItemsContainer'
 import JobItem from '@/components/Jobs/JobItem'
-import AnimationContainer from '../Animation/AnimationContainer'
+import type { Job } from '@/types/job'
 
 interface JobsContainerProps {
   jobs: Job[]
@@ -8,17 +8,12 @@ interface JobsContainerProps {
 
 export default function JobsContainer({ jobs }: JobsContainerProps) {
   return (
-    <div>
-      {jobs.map(job => (
-        <AnimationContainer
-          key={job.key}
-          itemKey={job.key}
-          animationId="job-container"
-          className="p-4 rounded-lg"
-        >
-          <JobItem job={job} />
-        </AnimationContainer>
-      ))}
-    </div>
+    <ItemsContainer
+      items={jobs}
+      animationId="job-container"
+      itemClassName="p-4 rounded-lg"
+      renderItem={job => <JobItem job={job} />}
+      emptyMessage="No professional experience yet."
+    />
   )
 }

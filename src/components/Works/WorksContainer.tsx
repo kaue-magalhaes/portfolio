@@ -1,6 +1,6 @@
+import ItemsContainer from '@/components/ItemsContainer'
 import type { Work } from '@/types/work'
 import WorkItem from './WorkItem'
-import AnimationContainer from '../Animation/AnimationContainer'
 
 interface WorksContainerProps {
   works: Work[]
@@ -8,17 +8,13 @@ interface WorksContainerProps {
 
 export default function WorksContainer({ works }: WorksContainerProps) {
   return (
-    <div className="grid sm:grid-cols-2">
-      {works.map(work => (
-        <AnimationContainer
-          key={work.key}
-          itemKey={work.key}
-          animationId="work-container"
-          className="rounded-lg text-card-foreground shadow-sm h-full flex flex-col border-0"
-        >
-          <WorkItem work={work} />
-        </AnimationContainer>
-      ))}
-    </div>
+    <ItemsContainer
+      items={works}
+      animationId="work-container"
+      containerClassName="grid sm:grid-cols-2"
+      itemClassName="rounded-lg text-card-foreground shadow-sm h-full flex flex-col border-0"
+      renderItem={work => <WorkItem work={work} />}
+      emptyMessage="No projects yet."
+    />
   )
 }
