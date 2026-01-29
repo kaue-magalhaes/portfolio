@@ -4,6 +4,8 @@ export interface BaseLink {
   href: string
 }
 
-export interface NavigationLink extends BaseLink {}
+// Type aliases for semantic clarity
+// These allow future extension if specific fields are needed
+export type NavigationLink = BaseLink
 
-export interface ContactLink extends BaseLink {}
+export type ContactLink = BaseLink
