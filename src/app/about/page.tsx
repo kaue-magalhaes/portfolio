@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import me from '../../../public/images/me.gif'
 import ContentContainer from '@/components/ContentContainer'
 import PageTransition from '@/components/PageTransition'
 import JobsContainer from '@/components/Jobs/JobsContainer'
@@ -16,12 +14,16 @@ export default function About() {
             </span>
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Image
-              src={me}
-              alt="Kauê de Magalhães"
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
               className="rounded"
-              unoptimized
-            />
+              aria-label="Kauê de Magalhães"
+            >
+              <source src="/images/me.mp4" type="video/mp4" />
+            </video>
             <div className="space-y-4">
               <p className="text-lg text-muted-foreground">
                 <span className="text-foreground">
