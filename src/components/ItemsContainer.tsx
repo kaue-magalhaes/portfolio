@@ -1,4 +1,5 @@
 import AnimationContainer from '@/components/Animation/AnimationContainer'
+import { AnimationGroup } from '@/contexts/AnimationGroupContext'
 import { cn } from '@/lib/utils'
 
 interface ItemsContainerProps<T extends { key: string }> {
@@ -27,17 +28,19 @@ export default function ItemsContainer<T extends { key: string }>({
   }
 
   return (
-    <div className={cn(containerClassName)}>
-      {items.map(item => (
-        <AnimationContainer
-          key={item.key}
-          itemKey={item.key}
-          animationId={animationId}
-          className={itemClassName}
-        >
-          {renderItem(item)}
-        </AnimationContainer>
-      ))}
-    </div>
+    <AnimationGroup>
+      <div className={cn(containerClassName)}>
+        {items.map(item => (
+          <AnimationContainer
+            key={item.key}
+            itemKey={item.key}
+            animationId={animationId}
+            className={itemClassName}
+          >
+            {renderItem(item)}
+          </AnimationContainer>
+        ))}
+      </div>
+    </AnimationGroup>
   )
 }
