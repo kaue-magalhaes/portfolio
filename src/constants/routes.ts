@@ -3,4 +3,5 @@ export const routes = {
   work: '/work',
   about: '/about',
   resume: '/resume',
+  blog: '/blog',
 }
