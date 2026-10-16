@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
 import CommandBar from '@/components/CommandBar/CommandBar'
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 import { commandActions } from '@/constants/commandActions'
 import { CommandBarProvider } from '@/contexts/CommandBarContext'
 
@@ -19,7 +19,7 @@ const geistMono = localFont({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://kauem.dev'),
+  metadataBase: new URL('https://www.kauemagalhaes.dev'),
   title: {
     default: 'Kauê de Magalhães - Full Stack Developer',
     template: '%s | Kauê de Magalhães',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://kauem.dev',
+    url: 'https://www.kauemagalhaes.dev',
     siteName: 'Kauê de Magalhães',
     title: 'Kauê de Magalhães - Full Stack Developer',
     description:
