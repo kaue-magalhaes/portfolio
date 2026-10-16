@@ -3,9 +3,11 @@ import PageTransition from '@/components/PageTransition'
 import WorksContainer from '@/components/Works/WorksContainer'
 import { pageContent } from '@/constants/pageContent'
 import { works } from '@/constants/works'
+import { getPosts, projectStoryHrefs } from '@/lib/blog'
 
-export default function Work() {
+export default async function Work() {
   const { headline } = pageContent.work
+  const storyHrefs = projectStoryHrefs(await getPosts())
 
   return (
     <PageTransition>
@@ -22,7 +24,7 @@ export default function Work() {
             trabalhei.
           </p>
         </div>
-        <WorksContainer works={works} />
+        <WorksContainer works={works} storyHrefs={storyHrefs} />
       </ContentContainer>
     </PageTransition>
   )
