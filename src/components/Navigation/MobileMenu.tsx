@@ -1,9 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { Menu } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu } from 'lucide-react'
+import { useState } from 'react'
 import {
   Sheet,
   SheetContent,
@@ -24,10 +24,10 @@ export default function MobileMenu({ routes }: MobileMenuProps) {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger className="md:hidden min-h-[44px] min-w-[44px] flex items-center justify-center -mr-2">
         <Menu className="h-6 w-6" />
-        <span className="sr-only">Open menu</span>
+        <span className="sr-only">Abrir menu</span>
       </SheetTrigger>
       <SheetContent side="right" className="w-[280px]">
-        <SheetTitle className="sr-only">Navigation menu</SheetTitle>
+        <SheetTitle className="sr-only">Menu de navegação</SheetTitle>
         <nav className="mt-8">
           <ul className="flex flex-col space-y-2">
             {routes.map(route => {

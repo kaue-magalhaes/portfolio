@@ -5,41 +5,41 @@ export const works: Work[] = [
     key: 'meta-por-mapa',
     title: 'Meta por Mapa',
     description:
-      'Live Brawl Stars tier list for every map, built from public ranked and trophy match data from Brawl Time Ninja. Shows win rate against the map average, matchups, and picks that adjust as brawlers get banned. Rebuilds itself every 3 hours.',
+      'Tier list de Brawl Stars para cada mapa, montada com dados públicos de partidas ranqueadas e de troféus do Brawl Time Ninja. Mostra a taxa de vitória comparada com a média do mapa, os confrontos e as escolhas que se ajustam conforme os personagens são banidos. Se atualiza sozinha a cada 3 horas.',
     url: 'https://kaue-magalhaes.github.io/meta-por-mapa/',
     image: {
       path: '/images/projects/meta-por-mapa.png',
-      alt: 'Meta por Mapa - Brawl Stars tier list by map',
+      alt: 'Meta por Mapa: tier list de Brawl Stars por mapa',
     },
   },
   {
     key: 'doafarma',
     title: 'DoaFarma',
     description:
-      'Full-stack medication donation platform connecting doctors with patients. Features include activity logging, push notifications, and LGPD-compliant data encryption.',
+      'Plataforma full-stack de doação de medicamentos que conecta médicos e pacientes. Tem registro de atividades, notificações push e criptografia de dados de acordo com a LGPD.',
     image: {
       path: '/images/me.jpg',
-      alt: 'DoaFarma - Medication Donation Platform',
+      alt: 'DoaFarma: plataforma de doação de medicamentos',
     },
   },
   {
     key: 'oneburguer',
     title: 'OneBurguer',
     description:
-      'Production-ready e-commerce platform for a burger restaurant. Customer menu with product customization, shopping cart, and admin dashboard for store operations.',
+      'Plataforma de pedidos em produção para uma hamburgueria. Cardápio com personalização de produtos, carrinho e painel administrativo para a operação da loja.',
     image: {
       path: '/images/me.jpg',
-      alt: 'OneBurguer - Food Ordering Platform',
+      alt: 'OneBurguer: plataforma de pedidos de comida',
     },
   },
   {
     key: 'crm-livewire',
-    title: 'CRM Sistema',
+    title: 'Sistema CRM',
     description:
-      'Customer Relationship Management with reactive UI components using Livewire 3, audit trail tracking, role-based access control, and complete user/customer management.',
+      'Sistema de gestão de relacionamento com clientes, com componentes reativos em Livewire 3, trilha de auditoria, controle de acesso por papel e gestão completa de usuários e clientes.',
     image: {
       path: '/images/me.jpg',
-      alt: 'CRM Sistema - Customer Relationship Management',
+      alt: 'Sistema CRM: gestão de relacionamento com clientes',
     },
   },
 ]

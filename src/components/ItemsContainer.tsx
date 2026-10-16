@@ -17,7 +17,7 @@ export default function ItemsContainer<T extends { key: string }>({
   renderItem,
   containerClassName,
   itemClassName,
-  emptyMessage = 'No items yet.',
+  emptyMessage = 'Nada por aqui ainda.',
 }: ItemsContainerProps<T>) {
   if (items.length === 0) {
     return (

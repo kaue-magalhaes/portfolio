@@ -21,11 +21,11 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.kauemagalhaes.dev'),
   title: {
-    default: 'Kauê de Magalhães - Full Stack Developer',
+    default: 'Kauê de Magalhães - Desenvolvedor Full Stack',
     template: '%s | Kauê de Magalhães',
   },
   description:
-    'Full Stack Developer especializado em Laravel, React e Next.js. Portfólio com projetos profissionais, experiência e artigos técnicos.',
+    'Desenvolvedor Full Stack especializado em Laravel, React e Next.js. Portfólio com projetos profissionais, experiência e artigos técnicos.',
   keywords: [
     'Full Stack Developer',
     'Laravel',
@@ -43,23 +43,23 @@ export const metadata: Metadata = {
     locale: 'pt_BR',
     url: 'https://www.kauemagalhaes.dev',
     siteName: 'Kauê de Magalhães',
-    title: 'Kauê de Magalhães - Full Stack Developer',
+    title: 'Kauê de Magalhães - Desenvolvedor Full Stack',
     description:
-      'Full Stack Developer especializado em Laravel, React e Next.js. Portfólio com projetos profissionais e artigos técnicos.',
+      'Desenvolvedor Full Stack especializado em Laravel, React e Next.js. Portfólio com projetos profissionais e artigos técnicos.',
     images: [
       {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Kauê de Magalhães - Full Stack Developer',
+        alt: 'Kauê de Magalhães - Desenvolvedor Full Stack',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kauê de Magalhães - Full Stack Developer',
+    title: 'Kauê de Magalhães - Desenvolvedor Full Stack',
     description:
-      'Full Stack Developer especializado em Laravel, React e Next.js.',
+      'Desenvolvedor Full Stack especializado em Laravel, React e Next.js.',
     images: ['/images/og-image.png'],
   },
   robots: {
@@ -74,7 +74,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="pt-BR" className="dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >

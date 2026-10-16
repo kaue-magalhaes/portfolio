@@ -14,7 +14,7 @@ export default function WorksContainer({ works }: WorksContainerProps) {
       containerClassName="grid sm:grid-cols-2"
       itemClassName="rounded-lg text-card-foreground shadow-sm h-full flex flex-col border-0"
       renderItem={work => <WorkItem work={work} />}
-      emptyMessage="No projects yet."
+      emptyMessage="Nenhum projeto ainda."
     />
   )
 }
