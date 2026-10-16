@@ -5,6 +5,7 @@ import CommandBar from '@/components/CommandBar/CommandBar'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import { commandActions } from '@/constants/commandActions'
+import { siteOpenGraph, siteTwitter } from '@/constants/seo'
 import { CommandBarProvider } from '@/contexts/CommandBarContext'
 
 const geistSans = localFont({
@@ -39,28 +40,18 @@ export const metadata: Metadata = {
   authors: [{ name: 'Kauê de Magalhães' }],
   creator: 'Kauê de Magalhães',
   openGraph: {
+    ...siteOpenGraph,
     type: 'website',
-    locale: 'pt_BR',
     url: 'https://www.kauemagalhaes.dev',
-    siteName: 'Kauê de Magalhães',
     title: 'Kauê de Magalhães - Desenvolvedor Full Stack',
     description:
       'Desenvolvedor Full Stack especializado em Laravel, React e Next.js. Portfólio com projetos profissionais e artigos técnicos.',
-    images: [
-      {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Kauê de Magalhães - Desenvolvedor Full Stack',
-      },
-    ],
   },
   twitter: {
-    card: 'summary_large_image',
+    ...siteTwitter,
     title: 'Kauê de Magalhães - Desenvolvedor Full Stack',
     description:
       'Desenvolvedor Full Stack especializado em Laravel, React e Next.js.',
-    images: ['/images/og-image.png'],
   },
   robots: {
     index: true,
