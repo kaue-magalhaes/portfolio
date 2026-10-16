@@ -1,14 +1,14 @@
 export const pageContent = {
   home: {
-    greeting: "Hi, I'm Kauê",
-    description: 'a full-stack developer with a passion for creating solutions',
+    greeting: 'Oi, eu sou o Kauê',
+    description: 'desenvolvedor full-stack apaixonado por criar soluções',
   },
   about: {
-    headline: 'Living to code. Loving to learn.',
+    headline: 'Vivo para programar. Amo aprender.',
     videoAlt: 'Kauê de Magalhães',
-    careerTitle: 'Career',
+    careerTitle: 'Carreira',
   },
   work: {
-    headline: 'Crafting code. Creating impact.',
+    headline: 'Escrevendo código. Gerando impacto.',
   },
 } as const

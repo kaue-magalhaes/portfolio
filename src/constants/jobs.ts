@@ -3,38 +3,38 @@ import type { Job } from '@/types/job'
 export const jobs: Job[] = [
   {
     key: 'proesc',
-    role: 'Full Stack Developer Junior',
+    role: 'Desenvolvedor Full Stack Júnior',
     company: {
       name: 'Proesc',
       url: 'https://proesc.com/',
     },
-    location: 'Amapá, Brazil (Hybrid)',
+    location: 'Amapá, Brasil (Híbrido)',
     period: {
-      start: 'April 2025',
-      end: 'Present',
+      start: 'Abril de 2025',
+      end: 'Atual',
     },
   },
   {
     key: 'freelance',
-    role: 'Full Stack Developer (Freelance)',
+    role: 'Desenvolvedor Full Stack (Freelancer)',
     period: {
-      start: 'July 2024',
-      end: 'March 2025',
-      duration: '9 mos',
+      start: 'Julho de 2024',
+      end: 'Março de 2025',
+      duration: '9 meses',
     },
   },
   {
     key: 'intern',
-    role: 'Full Stack Developer Intern',
+    role: 'Estagiário de Desenvolvimento Full Stack',
     company: {
       name: 'Ministério Público do Estado do Amapá',
       url: 'https://www.mpap.mp.br/',
     },
-    location: 'Amapá, Brazil',
+    location: 'Amapá, Brasil',
     period: {
-      start: 'April 2023',
-      end: 'May 2024',
-      duration: '1 yr 1 mos',
+      start: 'Abril de 2023',
+      end: 'Maio de 2024',
+      duration: '1 ano e 1 mês',
     },
   },
 ]

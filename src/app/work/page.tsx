@@ -17,9 +17,9 @@ export default function Work() {
             </span>
           </h1>
           <p className="text-muted-foreground">
-            I'm passionate about developing software. Here you can find{' '}
-            <span className="text-foreground">some of the projects</span> I've
-            worked on.
+            Sou apaixonado por desenvolver software. Aqui estão{' '}
+            <span className="text-foreground">alguns dos projetos</span> em que
+            trabalhei.
           </p>
         </div>
         <WorksContainer works={works} />

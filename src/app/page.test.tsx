@@ -31,7 +31,7 @@ describe('Home Page', () => {
   it('should render greeting with name', () => {
     render(<Home />)
 
-    expect(screen.getByText(/Hi, I'm Kauê/)).toBeInTheDocument()
+    expect(screen.getByText(/Oi, eu sou o Kauê/)).toBeInTheDocument()
   })
 
   it('should render waving hand emoji', () => {
@@ -44,16 +44,14 @@ describe('Home Page', () => {
     render(<Home />)
 
     expect(
-      screen.getByText(
-        /a full-stack developer with a passion for creating solutions/
-      )
+      screen.getByText(/desenvolvedor full-stack apaixonado por criar soluções/)
     ).toBeInTheDocument()
   })
 
   it('should render command bar button', () => {
     render(<Home />)
 
-    expect(screen.getByText('Press')).toBeInTheDocument()
+    expect(screen.getByText('Aperte')).toBeInTheDocument()
     expect(screen.getByText('Ctrl')).toBeInTheDocument()
     expect(screen.getByText('K')).toBeInTheDocument()
   })
@@ -63,6 +61,6 @@ describe('Home Page', () => {
 
     const heading = screen.getByRole('heading', { level: 1 })
     expect(heading).toBeInTheDocument()
-    expect(heading).toHaveTextContent(/Hi, I'm Kauê/)
+    expect(heading).toHaveTextContent(/Oi, eu sou o Kauê/)
   })
 })

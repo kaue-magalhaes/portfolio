@@ -30,30 +30,31 @@ export default function About() {
             <div className="space-y-4">
               <p className="text-lg text-muted-foreground">
                 <span className="text-foreground">
-                  I'm a full-stack developer
+                  Sou desenvolvedor full-stack
                 </span>{' '}
-                with a big dream: to one day work at top tech companies like
-                Google or Meta.
+                com um grande sonho: trabalhar um dia em grandes empresas de
+                tecnologia, como Google ou Meta.
               </p>
               <p className="text-lg text-muted-foreground">
-                In my{' '}
+                Em{' '}
                 <span className="text-foreground">
-                  almost 3 years of experience
-                </span>{' '}
-                I'm constantly growing by studying every day and challenging
-                myself to go beyond what I know.
+                  quase 3 anos de experiência
+                </span>
+                , venho crescendo estudando todo dia e me desafiando a ir além
+                do que já sei.
               </p>
               <p className="text-lg text-muted-foreground">
-                What drives me the most is my{' '}
-                <span className="text-foreground">love for technology</span> and
-                my <span className="text-foreground">passion for learning</span>
-                . I thrive in environments where curiosity, collaboration, and
-                innovation are at the center.
+                O que mais me move é o meu{' '}
+                <span className="text-foreground">amor por tecnologia</span> e a
+                minha{' '}
+                <span className="text-foreground">paixão por aprender</span>.
+                Rendo melhor em ambientes onde curiosidade, colaboração e
+                inovação estão no centro.
               </p>
               <p className="text-lg text-muted-foreground">
-                When I'm not coding, I enjoy watching movies, playing soccer
-                with my friends, and{' '}
-                <span className="text-foreground">drinking coffee</span>.
+                Quando não estou programando, gosto de assistir filmes, jogar
+                bola com os amigos e{' '}
+                <span className="text-foreground">tomar café</span>.
               </p>
             </div>
           </div>

@@ -13,7 +13,7 @@ export default function JobsContainer({ jobs }: JobsContainerProps) {
       animationId="job-container"
       itemClassName="p-4 rounded-lg"
       renderItem={job => <JobItem job={job} />}
-      emptyMessage="No professional experience yet."
+      emptyMessage="Nenhuma experiência profissional ainda."
     />
   )
 }

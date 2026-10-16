@@ -9,8 +9,8 @@ import {
   CommandList,
   CommandShortcut,
 } from '@/components/ui/command'
-import type { CommandAction } from '@/types/command'
 import { useToggleOnKeyCombo } from '@/hooks/useToggleOnKeyCombo'
+import type { CommandAction } from '@/types/command'
 
 interface CommandBarProps {
   actions: CommandAction[]
@@ -30,9 +30,9 @@ export default function CommandBar({ actions }: CommandBarProps) {
 
   return (
     <CommandDialog open={open} onOpenChange={toggleCommandBar}>
-      <CommandInput placeholder="Type a command or search..." />
-      <CommandList>
-        <CommandEmpty>No results found.</CommandEmpty>
+      <CommandInput placeholder="Digite um comando ou busque..." />
+      <CommandList label="Sugestões">
+        <CommandEmpty>Nenhum resultado encontrado.</CommandEmpty>
         {actions.map(action => (
           <CommandItem key={action.key} onSelect={() => handleSelect(action)}>
             {action.icon}
