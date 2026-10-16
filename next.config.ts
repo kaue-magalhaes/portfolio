@@ -1,4 +1,5 @@
-import type { NextConfig } from "next";
+import createMDX from '@next/mdx'
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   async headers() {
@@ -47,4 +48,17 @@ const nextConfig: NextConfig = {
   },
 }
 
-export default nextConfig;
+// Plugin names go as strings because Turbopack, used by next dev and next
+// build in Next 16, only accepts serializable MDX options.
+const withMDX = createMDX({
+  options: {
+    rehypePlugins: [
+      [
+        'rehype-pretty-code',
+        { theme: 'github-dark-dimmed', keepBackground: true },
+      ],
+    ],
+  },
+})
+
+export default withMDX(nextConfig)
