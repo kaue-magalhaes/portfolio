@@ -10,5 +10,16 @@ export const pageContent = {
   },
   work: {
     headline: 'Escrevendo código. Gerando impacto.',
+    storyLabel: 'Como eu fiz →',
+  },
+  blog: {
+    headline: 'Blog',
+    description:
+      'O que eu aprendo construindo coisas, contado do jeito que aconteceu.',
+    emptyMessage: 'Nenhum post publicado ainda.',
+  },
+  post: {
+    projectLabel: 'Projeto:',
+    backToList: '← Voltar para o blog',
   },
 } as const

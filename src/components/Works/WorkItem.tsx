@@ -1,12 +1,15 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import { pageContent } from '@/constants/pageContent'
 import type { Work } from '@/types/work'
 import { CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
 
 interface WorkItemProps {
   work: Work
+  storyHref?: string
 }
 
-export default function WorkItem({ work }: WorkItemProps) {
+export default function WorkItem({ work, storyHref }: WorkItemProps) {
   return (
     <>
       <CardHeader>
@@ -37,6 +40,14 @@ export default function WorkItem({ work }: WorkItemProps) {
           )}
         </CardTitle>
         <CardDescription>{work.description}</CardDescription>
+        {storyHref && (
+          <Link
+            href={storyHref}
+            className="mt-3 inline-block text-sm text-foreground underline hover:text-foreground/90"
+          >
+            {pageContent.work.storyLabel}
+          </Link>
+        )}
       </CardContent>
     </>
   )

@@ -1,0 +1,16 @@
+{/*
+  Modelo de post. Arquivos que começam com "_" não viram post, e este
+  precisa ficar na pasta: sem nenhum .mdx aqui, o build quebra.
+  Para escrever um post, copie este arquivo para <endereco-do-post>.mdx.
+  O nome do arquivo vira o endereço: /blog/<endereco-do-post>.
+*/}
+
+export const metadata = {
+  title: 'Título do post',
+  description: 'Uma ou duas frases. Aparecem na lista e na prévia do link.',
+  date: '2026-10-20',
+  // project: 'meta-por-mapa', // chave de src/constants/works.ts
+  draft: true, // apague esta linha para publicar
+}
+
+Texto em Markdown.
