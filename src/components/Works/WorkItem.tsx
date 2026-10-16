@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
 import type { Work } from '@/types/work'
+import { CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
 
 interface WorkItemProps {
   work: Work
@@ -23,7 +23,18 @@ export default function WorkItem({ work }: WorkItemProps) {
       </CardHeader>
       <CardContent>
         <CardTitle className="font-semibold text-xl mb-2">
-          {work.title}
+          {work.url ? (
+            <a
+              href={work.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              {work.title} ↗
+            </a>
+          ) : (
+            work.title
+          )}
         </CardTitle>
         <CardDescription>{work.description}</CardDescription>
       </CardContent>

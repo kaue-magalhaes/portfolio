@@ -2,6 +2,17 @@ import type { Work } from '@/types/work'
 
 export const works: Work[] = [
   {
+    key: 'meta-por-mapa',
+    title: 'Meta por Mapa',
+    description:
+      'Live Brawl Stars tier list for every map, built from public ranked and trophy match data from Brawl Time Ninja. Shows win rate against the map average, matchups, and picks that adjust as brawlers get banned. Rebuilds itself every 3 hours.',
+    url: 'https://kaue-magalhaes.github.io/meta-por-mapa/',
+    image: {
+      path: '/images/projects/meta-por-mapa.png',
+      alt: 'Meta por Mapa - Brawl Stars tier list by map',
+    },
+  },
+  {
     key: 'doafarma',
     title: 'DoaFarma',
     description:
